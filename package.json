@@ -1,6 +1,6 @@
 {
   "name": "jquery-parallax",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": " Used to recreate the Nike Better World parallax effect",
   "main": "scripts/jquery.parallax-1.1.3.js",
   "scripts": {
