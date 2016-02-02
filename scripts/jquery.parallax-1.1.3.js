@@ -10,8 +10,15 @@ Dual licensed under the MIT and GPL licenses:
 http://www.opensource.org/licenses/mit-license.php
 http://www.gnu.org/licenses/gpl.html
 */
-
-(function( $ ){
+(function (root, factory) {
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    } else if (typeof module === 'object' && module.exports) {
+        factory(require('jquery'));
+    } else {
+        factory(root.jQuery);
+    }
+}(this, function ($) {
 	var $window = $(window);
 	var windowHeight = $window.height();
 
@@ -66,4 +73,4 @@ http://www.gnu.org/licenses/gpl.html
 		$window.bind('scroll', update).resize(update);
 		update();
 	};
-})(jQuery);
+}));
